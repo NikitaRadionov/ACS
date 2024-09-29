@@ -210,7 +210,7 @@ test4:
 test5:
 	la t0 test_dividend_2
 	lw t0 0(t0)
-	la t1 test_divisor_1
+	la t1 test_divisor_2
 	lw t1 0(t1)
 	
 	li a7 4
