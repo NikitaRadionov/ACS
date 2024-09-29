@@ -1,12 +1,12 @@
 .data
-	tests_or_input: .asciz "Введите 0 чтобы запустить тесты, 1 чтобы запустить программу: "
-	input_dividend: .asciz "Введите делимое: "
-	input_divisor: .asciz "Введите делитель: "
-	output_quotient: .asciz "Частное: "
-	output_remainder: .asciz "Остаток: "
-	zero_division_error: .asciz "Ошибка: произошла попытка деления на ноль"
+	tests_or_input: .asciz "Р’РІРµРґРёС‚Рµ 0 С‡С‚РѕР±С‹ Р·Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚С‹, 1 С‡С‚РѕР±С‹ Р·Р°РїСѓСЃС‚РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ: "
+	input_dividend: .asciz "Р’РІРµРґРёС‚Рµ РґРµР»РёРјРѕРµ: "
+	input_divisor: .asciz "Р’РІРµРґРёС‚Рµ РґРµР»РёС‚РµР»СЊ: "
+	output_quotient: .asciz "Р§Р°СЃС‚РЅРѕРµ: "
+	output_remainder: .asciz "РћСЃС‚Р°С‚РѕРє: "
+	zero_division_error: .asciz "РћС€РёР±РєР°: РїСЂРѕРёР·РѕС€Р»Р° РїРѕРїС‹С‚РєР° РґРµР»РµРЅРёСЏ РЅР° РЅРѕР»СЊ"
 	endl: .asciz "\n"
-	tests_sep:	.asciz "~~~~~\nTEST "
+	tests_sep:	.asciz "\nTEST "
 	
 	i:	.word 1
 	
