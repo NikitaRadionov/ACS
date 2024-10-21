@@ -10,6 +10,8 @@
 	n8: .word 5
 	n9: .word 6
 	n10: .word 6
+	n11: .word -1
+	n12: .word 11
 .align 2
 	A_array: .word 2
 	A_arrend:
@@ -73,6 +75,9 @@
 .align 2
 	R_array: .space 40
 	R_arrend:
+.align 2
+	Errror: .space 40
+	Errror_arrend:
 .text
 	run_test_case(n1, A_array, R_array, A_array_answer)
 	run_test_case(n2, B_array, R_array, B_array_answer)
@@ -84,4 +89,6 @@
 	run_test_case(n8, H_array, R_array, H_array_answer)
 	run_test_case(n9, K_array, R_array, K_array_answer)
 	run_test_case(n10, L_array, R_array, L_array_answer)
+	run_test_case(n11, L_array, R_array, Errror)
+	run_test_case(n12, L_array, R_array, Errror)
 	exit()
