@@ -1,10 +1,24 @@
 
 # Запуск теста
 
-.macro run_test_case(%n, %input_array, %output_array, %expected_array)
+.macro run_test_case(%n, %input_array, %output_array, %expected)
 	push(s1)
 	lw s1, %n
-	print_str("Input   : ")
+	print_str("Input   : n: ")
+	print_int_space(s1)
+	li t3, 1
+	li t4, 10
+	
+	blt s1, t3, size_error_case 		# Если n < 1, то ошибка
+	bgt s1, t4, size_error_case 		# Если n > 10, то ошибка
+	j continue_case
+size_error_case:
+	print_newline()
+	print_str("Output  : Invalid array size. Size must be between 1 and 10\n")
+	print_newline()
+	j final_case
+continue_case:
+	print_str("array:  ")
 	print_array_wrapper(s1, %input_array)
 	print_newline()
 	init_array_by_indices(s1, %output_array)
@@ -13,9 +27,10 @@
 	print_array_wrapper(s1, %output_array)
 	print_newline()
 	print_str("Expected: ")
-	print_array_wrapper(s1, %expected_array)
+	print_array_wrapper(s1, %expected)
 	print_newline()
 	print_newline()
+final_case:
 	pop(s1)
 .end_macro
 
