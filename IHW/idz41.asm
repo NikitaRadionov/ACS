@@ -1,6 +1,3 @@
-# комментарии
-# тесты
-
 .include "macrolib.asm"
 .global main
 .data
@@ -12,9 +9,9 @@
 	B_arrend:
 .text
 main:
-	read_array_wrapper(A_array) # читаем исходный массив с клавиатуры
+	read_array_wrapper(A_array) # С‡РёС‚Р°РµРј РёСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 	mv s1, a0
-	init_array_by_indices(s1, B_array) # инициализируем массив B индексами
-	sort_result_array_wrapper(s1, A_array, B_array) #  Сортируем массив B 
-	print_array_wrapper(s1, B_array) # печатаем результат на экран
+	init_array_by_indices(s1, B_array) # РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј РјР°СЃСЃРёРІ B РёРЅРґРµРєСЃР°РјРё
+	sort_result_array_wrapper(s1, A_array, B_array) #  РЎРѕСЂС‚РёСЂСѓРµРј РјР°СЃСЃРёРІ B 
+	print_array_wrapper(s1, B_array) # РїРµС‡Р°С‚Р°РµРј СЂРµР·СѓР»СЊС‚Р°С‚ РЅР° СЌРєСЂР°РЅ
 	exit()
