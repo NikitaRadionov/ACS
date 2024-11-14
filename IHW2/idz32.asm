@@ -3,8 +3,8 @@
 
 .text
 main:
-	read_double(fs1)		# читаем double с клавиатуры
-	check_accuracy(fs1)		# проверяем корректность входных данных
-	half_division_wrapper(fs1)	# исполняем основной алгоритм
-	print_double(fa0)		# печатаем ответ
+	read_double(fs1)		# С‡РёС‚Р°РµРј double СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
+	check_accuracy(fs1)		# РїСЂРѕРІРµСЂСЏРµРј РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
+	half_division_wrapper(fs1)	# РёСЃРїРѕР»РЅСЏРµРј РѕСЃРЅРѕРІРЅРѕР№ Р°Р»РіРѕСЂРёС‚Рј
+	print_double(fa0)		# РїРµС‡Р°С‚Р°РµРј РѕС‚РІРµС‚
 	exit()
