@@ -1,11 +1,11 @@
-.include "macrolib2.asm"
-.eqv    TEXT_SIZE 512								# Размер буфера для текста
+.include "macrolib.asm"
+.eqv    TEXT_SIZE 512								# Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР° РґР»СЏ С‚РµРєСЃС‚Р°
 .data
-	input_file_name1:		.asciz "tests/in/test1.txt"		 # Обычный тест 
-	input_file_name2:		.asciz "tests/in/test2.txt"		 # тест на считывание до 10 КБ
-	input_file_name3:		.asciz "tests/in/test3doesnotexist.txt"  # Файл с невалидным именем
-	input_file_name4:		.asciz "tests/in/test4.txt"		 # пустой файл
-	input_file_name5:		.asciz "tests/in/test5.txt"		 # файл больше 10КБ
+	input_file_name1:		.asciz "tests/in/test1.txt"		 # РћР±С‹С‡РЅС‹Р№ С‚РµСЃС‚ 
+	input_file_name2:		.asciz "tests/in/test2.txt"		 # С‚РµСЃС‚ РЅР° СЃС‡РёС‚С‹РІР°РЅРёРµ РґРѕ 10 РљР‘
+	input_file_name3:		.asciz "tests/in/test3doesnotexist.txt"  # Р¤Р°Р№Р» СЃ РЅРµРІР°Р»РёРґРЅС‹Рј РёРјРµРЅРµРј
+	input_file_name4:		.asciz "tests/in/test4.txt"		 # РїСѓСЃС‚РѕР№ С„Р°Р№Р»
+	input_file_name5:		.asciz "tests/in/test5.txt"		 # С„Р°Р№Р» Р±РѕР»СЊС€Рµ 10РљР‘
 	
 	output_file_name1:		.asciz "tests/out/output1.txt"
 	output_file_name2:		.asciz "tests/out/output2.txt"
