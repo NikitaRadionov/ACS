@@ -46,14 +46,12 @@ read_loop:
     	bne	s2 s4 end_loop
 	
 	addi	s9, s9, -1
-	beqz	s9, heap_overflow
+	beqz	s9, end_loop
 	
     	allocate(s7)				
     	add	s5 s5 s2			# Адрес для чтения смещается на размер порции
     	b read_loop				# Обработка следующей порции текста из файла
-heap_overflow:
-	li	a0, 0
-	j	end_read_file_heap
+
 end_loop:
     	# Закрытие файла
     	close(s0)
@@ -61,7 +59,7 @@ end_loop:
 	write_ending_zero(s3, s6)
     	
 	mv	a0, s3
-end_read_file_heap:
+
 	pop(s9)
 	pop(s8)
 	pop(s7)
