@@ -12,7 +12,6 @@
 main:
 	read_filename_dialog("Input file path: ", input_file_name, NAME_SIZE, "Incorrect input. Please Try Again", "input.txt")
 	read_file_heap_wrapper(input_file_name, TEXT_SIZE)					# чтение текста из файла в кучу
-	check_file_size(a0)
 	algorithm_wrapper(a0)									# выполнение основного алгоритма
 	prepear_answer(answer)
 	mv	s11, a0
