@@ -25,17 +25,12 @@ final_open:
 	open_for_test(%input_file_name, READ_ONLY)
 	beqz	a0, error_filename_case
 	read_file_heap_wrapper(%input_file_name, 512)
-	beqz	a0, big_file_case
 	algorithm_wrapper(a0)
 	prepear_answer(test_answer)
 	mv	s11, a0
 	write_file_wrapper(%output_file_name, test_answer, s11)
 	
 	strcmp(test_answer, %answer)
-	beqz a0, correct_case
-	j incorrect_case
-big_file_case:
-	strcmp(error_bigfile, %answer)
 	beqz a0, correct_case
 	j incorrect_case
 error_filename_case:
@@ -51,15 +46,6 @@ final_test_case:
 
 .end_macro
 
-.macro check_file_size(%desc)
-	mv	t1, %desc
-	beqz	t1, check_failed
-	j end_check
-check_failed:
-	print_str("Input file is too big")
-	exit()
-end_check:
-.end_macro
 
 .macro strcmp(%str1, %str2)
 	la	a0, %str1
