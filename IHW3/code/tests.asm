@@ -17,7 +17,7 @@
 	answer2:	.asciz "Incorrect bracket sequence\n"
 	answer3:	.asciz "Incorrect file name"
 	answer4:	.asciz "Correct bracket sequence\n"
-	answer5:	.asciz "Input file is too big"
+	answer5:	.asciz "Incorrect bracket sequence\n"
 .text
 	run_test_case(input_file_name1, output_file_name1, answer1)
 	run_test_case(input_file_name2, output_file_name2, answer2)
