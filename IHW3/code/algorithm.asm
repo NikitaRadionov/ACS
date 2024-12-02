@@ -1,9 +1,9 @@
-.include "macrolib2.asm"
+.include "macrolib.asm"
 .global algorithm
 
 .text
 algorithm:
-# В a0 передается адрес буфера strbuf с текстом
+# Р’ a0 РїРµСЂРµРґР°РµС‚СЃСЏ Р°РґСЂРµСЃ Р±СѓС„РµСЂР° strbuf СЃ С‚РµРєСЃС‚РѕРј
 	push(ra)
 	li 	t0, 0
 	mv 	t1, a0
@@ -38,8 +38,3 @@ negative_answer:
 end_algorithm:
 	pop(ra)
 	ret
-	
-	
-    	
-	
-    	
